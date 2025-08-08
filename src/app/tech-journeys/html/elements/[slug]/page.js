@@ -1,6 +1,7 @@
 import htmlElementsContent from "@/data/htmlElementsContent.json";
 import HtmlPlayground from "@/components/HtmlPlayground";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 export async function generateStaticParams() {
   return Object.keys(htmlElementsContent).map((slug) => ({ slug }));
@@ -26,13 +27,8 @@ export default function HtmlElementPage({ params }) {
   const isHeadingPage = params.slug === "heading";
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#181C2B] via-[#232946] to-[#181C2B]">
-      <main
-        className={
-          isHeadingPage
-            ? "max-w-5xl mx-auto py-10 px-4"
-            : "max-w-3xl mx-auto py-10 px-4"
-        }
-      >
+      <Header />
+      <main className="max-w-5xl mx-auto py-10 px-4">
         <h1
           className="text-4xl font-extrabold mb-8 text-center text-[#FFD700] drop-shadow-lg tracking-wide"
           style={{ textShadow: "0 2px 16px #232946" }}

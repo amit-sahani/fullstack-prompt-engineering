@@ -9,7 +9,7 @@ export default function HtmlExamples() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#181C2B] via-[#232946] to-[#181C2B]">
       <Header />
-      <main className="max-w-7xl mx-auto py-14 px-4">
+      <main className="max-w-5xl mx-auto py-10 px-4">
         <h1
           className="text-4xl font-extrabold mb-10 text-center text-[#FFD700] drop-shadow-lg tracking-wide"
           style={{ textShadow: "0 2px 16px #232946" }}
@@ -19,18 +19,18 @@ export default function HtmlExamples() {
         <HtmlPlayground initialHtml={initialHtml} />
         {/* Navigation Links */}
         <div className="flex justify-between items-center mt-10">
-          <a
+          <Link
             href="/tech-journeys/html/attributes"
             className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
           >
             ← Previous
-            <Link
-              href="/tech-journeys/html/elements/heading"
-              className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
-            >
-              Heading →
-            </Link>
-          </a>
+          </Link>
+          <Link
+            href="/tech-journeys/html/elements/heading"
+            className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
+          >
+            Heading →
+          </Link>
         </div>
       </main>
     </div>
