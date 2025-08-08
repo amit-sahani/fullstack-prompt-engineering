@@ -31,8 +31,7 @@
   "paragraph": {
     "title": "<p> - Paragraph Element",
     "slug": "paragraph",
-    "heading": "HTML <p> Element",
-    "subheading": "Defining Paragraphs of Text",
+    "heading": "Paragraph Element",
     "note": "Note: Paragraphs are for blocks of text. Don't use <p> for headings or lists.",
     "content": [
       "The <p> element defines a paragraph of text. It is a block-level element and automatically adds space before and after itself.",

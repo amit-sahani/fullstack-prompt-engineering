@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Header from "../../../../components/Header";
 import Link from "next/link";
 
 const TAGS = [
@@ -134,205 +133,202 @@ export default function HtmlBasics() {
       : "";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#181C2B] via-[#232946] to-[#181C2B] transition-colors duration-300">
-      <Header />
-      <main className="max-w-5xl mx-auto py-10 px-4">
-        <h1
-          className="text-4xl font-extrabold mb-10 text-center text-[#FFD700] drop-shadow-lg tracking-wide"
-          style={{ textShadow: "0 2px 16px #232946" }}
-        >
-          HTML Basics
-        </h1>
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Left: HTML Boilerplate */}
-          <div className="flex-1 bg-gradient-to-br from-[#232946] to-[#181C2B] rounded-xl shadow-2xl p-8 text-lg font-mono text-[#F4F4F6] select-text overflow-x-auto border-2 border-[#FFD700]/30">
-            <pre className="whitespace-pre-wrap">
-              <code>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "doctype"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("doctype")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"<!DOCTYPE html>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "html"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("html")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {'<html lang="en">'}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "head"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("head")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"  <head>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "meta"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("meta")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {'    <meta charset="UTF-8" />'}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "title"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("title")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"    <title>My HTML5 Page</title>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "link"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("link")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {'    <link rel="stylesheet" href="styles.css" />'}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "head"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("head")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"  </head>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "body"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("body")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"  <body>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "h1"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("h1")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"    <h1>Hello, HTML5!</h1>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "p"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("p")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"    <p>This is a sample HTML5 boilerplate.</p>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "script"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("script")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {'    <script src="main.js"></script>'}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "body"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("body")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"  </body>"}
-                </div>
-                <div
-                  className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
-                    "html"
-                  )}`}
-                  onMouseEnter={() => setActiveTag("html")}
-                  onMouseLeave={() => setActiveTag(null)}
-                >
-                  {"</html>"}
-                </div>
-              </code>
-            </pre>
-          </div>
-          {/* Right: Tag Info */}
-          <div className="flex-1 bg-gradient-to-br from-[#232946] to-[#181C2B] rounded-xl shadow-2xl p-10 min-h-[400px] border-2 border-[#FFD700]/30 flex flex-col justify-center">
-            {activeTag ? (
-              (() => {
-                const tag = TAGS.find((t) => t.id === activeTag);
-                return (
-                  <>
-                    <h2
-                      className={`text-3xl font-extrabold mb-6 px-4 py-2 rounded-lg shadow-lg bg-gradient-to-r from-[#FFD700]/80 to-[#F4E2D8]/80 text-[#232946] border-2 border-[#FFD700]/60`}
-                      style={{
-                        letterSpacing: "0.02em",
-                        filter: "drop-shadow(0 2px 16px #FFD700)",
-                      }}
-                    >
-                      {tag.label}
-                    </h2>
-                    <ul className="list-disc pl-8 text-[#FFD700] text-lg mb-8 space-y-2">
-                      {tag.info.map((item, idx) => (
+    <>
+      <h1
+        className="text-4xl font-extrabold mb-10 text-center text-[#FFD700] drop-shadow-lg tracking-wide"
+        style={{ textShadow: "0 2px 16px #232946" }}
+      >
+        HTML Basics
+      </h1>
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Left: HTML Boilerplate */}
+        <div className="flex-1 bg-gradient-to-br from-[#232946] to-[#181C2B] rounded-xl shadow-2xl p-8 text-lg font-mono text-[#F4F4F6] select-text overflow-x-auto border-2 border-[#FFD700]/30">
+          <pre className="whitespace-pre-wrap">
+            <code>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "doctype"
+                )}`}
+                onMouseEnter={() => setActiveTag("doctype")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"<!DOCTYPE html>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "html"
+                )}`}
+                onMouseEnter={() => setActiveTag("html")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {'<html lang="en">'}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "head"
+                )}`}
+                onMouseEnter={() => setActiveTag("head")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"  <head>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "meta"
+                )}`}
+                onMouseEnter={() => setActiveTag("meta")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {'    <meta charset="UTF-8" />'}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "title"
+                )}`}
+                onMouseEnter={() => setActiveTag("title")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"    <title>My HTML5 Page</title>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "link"
+                )}`}
+                onMouseEnter={() => setActiveTag("link")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {'    <link rel="stylesheet" href="styles.css" />'}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "head"
+                )}`}
+                onMouseEnter={() => setActiveTag("head")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"  </head>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "body"
+                )}`}
+                onMouseEnter={() => setActiveTag("body")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"  <body>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "h1"
+                )}`}
+                onMouseEnter={() => setActiveTag("h1")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"    <h1>Hello, HTML5!</h1>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "p"
+                )}`}
+                onMouseEnter={() => setActiveTag("p")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"    <p>This is a sample HTML5 boilerplate.</p>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "script"
+                )}`}
+                onMouseEnter={() => setActiveTag("script")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {'    <script src="main.js"></script>'}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "body"
+                )}`}
+                onMouseEnter={() => setActiveTag("body")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"  </body>"}
+              </div>
+              <div
+                className={`cursor-pointer rounded px-2 py-1 mb-1 ${highlightLine(
+                  "html"
+                )}`}
+                onMouseEnter={() => setActiveTag("html")}
+                onMouseLeave={() => setActiveTag(null)}
+              >
+                {"</html>"}
+              </div>
+            </code>
+          </pre>
+        </div>
+        {/* Right: Tag Info */}
+        <div className="flex-1 bg-gradient-to-br from-[#232946] to-[#181C2B] rounded-xl shadow-2xl p-10 min-h-[400px] border-2 border-[#FFD700]/30 flex flex-col justify-center">
+          {activeTag ? (
+            (() => {
+              const tag = TAGS.find((t) => t.id === activeTag);
+              return (
+                <>
+                  <h2
+                    className={`text-3xl font-extrabold mb-6 px-4 py-2 rounded-lg shadow-lg bg-gradient-to-r from-[#FFD700]/80 to-[#F4E2D8]/80 text-[#232946] border-2 border-[#FFD700]/60`}
+                    style={{
+                      letterSpacing: "0.02em",
+                      filter: "drop-shadow(0 2px 16px #FFD700)",
+                    }}
+                  >
+                    {tag.label}
+                  </h2>
+                  <ul className="list-disc pl-8 text-[#FFD700] text-lg mb-8 space-y-2">
+                    {tag.info.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="mb-8">
+                    <span className="font-semibold text-[#FFD700] text-lg">
+                      Use Cases:
+                    </span>
+                    <ul className="list-disc pl-8 text-[#F4E2D8] text-base mt-2 space-y-1">
+                      {tag.useCases?.map((item, idx) => (
                         <li key={idx}>{item}</li>
                       ))}
                     </ul>
-                    <div className="mb-8">
-                      <span className="font-semibold text-[#FFD700] text-lg">
-                        Use Cases:
-                      </span>
-                      <ul className="list-disc pl-8 text-[#F4E2D8] text-base mt-2 space-y-1">
-                        {tag.useCases?.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mb-2">
-                      <span className="font-semibold text-[#FFD700] text-lg">
-                        Example:
-                      </span>
-                      <pre className="bg-[#232946]/80 rounded-lg p-4 text-base text-[#FFD700] border border-[#FFD700]/30 mt-2 overflow-x-auto shadow-inner">
-                        {tag.example}
-                      </pre>
-                    </div>
-                  </>
-                );
-              })()
-            ) : (
-              <div className="text-[#FFD700]/60 text-lg flex flex-col items-center justify-center h-full">
-                <span>Hover over a tag to see details here.</span>
-              </div>
-            )}
-          </div>
+                  </div>
+                  <div className="mb-2">
+                    <span className="font-semibold text-[#FFD700] text-lg">
+                      Example:
+                    </span>
+                    <pre className="bg-[#232946]/80 rounded-lg p-4 text-base text-[#FFD700] border border-[#FFD700]/30 mt-2 overflow-x-auto shadow-inner">
+                      {tag.example}
+                    </pre>
+                  </div>
+                </>
+              );
+            })()
+          ) : (
+            <div className="text-[#FFD700]/60 text-lg flex flex-col items-center justify-center h-full">
+              <span>Hover over a tag to see details here.</span>
+            </div>
+          )}
         </div>
-        {/* Navigation Links */}
-        <div className="flex justify-between items-center mt-10">
-          <Link
-            href="/tech-journeys/html"
-            className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
-          >
-            ← Previous
-          </Link>
-          <Link
-            href="/tech-journeys/html/elements"
-            className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
-          >
-            Next →
-          </Link>
-        </div>
-      </main>
-    </div>
+      </div>
+      {/* Navigation Links */}
+      <div className="flex justify-between items-center mt-10">
+        <Link
+          href="/tech-journeys/html"
+          className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
+        >
+          ← Previous
+        </Link>
+        <Link
+          href="/tech-journeys/html/elements"
+          className="px-4 py-2 rounded bg-gradient-to-r from-[#FFD700] to-[#F4E2D8] text-[#232946] font-bold shadow hover:from-[#F4E2D8] hover:to-[#FFD700] border border-[#FFD700]/60 transition-colors"
+        >
+          Next →
+        </Link>
+      </div>
+    </>
   );
 }
