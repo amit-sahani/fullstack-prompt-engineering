@@ -1,0 +1,56 @@
+{
+  "heading": {
+    "title": "<h1>-<h6> - Heading Elements",
+    "slug": "heading",
+    "heading": "Heading Elements",
+    "subheading": "",
+    "content": [
+      "HTML provides six levels of heading elements: <h1> through <h6>. <h1> is the most important and largest, while <h6> is the least important and smallest.",
+      "Headings help organize content, improve accessibility, and provide structure for both users and search engines.",
+      "Search engines use the headings to index the structure and content of your web pages.",
+      "Users often skim a page by its headings. It is important to use headings to show the document structure.",
+      "Use <h1> for the main title of the page (only once per page), and use <h2> to <h6> for sub-sections and further subdivisions.",
+      "Each heading level has a different default size and boldness, making the document hierarchy visually clear. By default, <h1> is the largest and <h6> is the smallest. You can change the size of any heading using CSS, for example: h2 { font-size: 2rem; }.",
+      "Example: A blog post might use <h1> for the post title, <h2> for section headings, and <h3> for sub-sections within those sections."
+    ],
+    "examples": [
+      {
+        "label": "All Heading Levels",
+        "code": "<h1>This is an h1 heading</h1>\n<h2>This is an h2 heading</h2>\n<h3>This is an h3 heading</h3>\n<h4>This is an h4 heading</h4>\n<h5>This is an h5 heading</h5>\n<h6>This is an h6 heading</h6>"
+      },
+      {
+        "label": "Semantic Structure Example",
+        "code": "<h1>Blog Post Title</h1>\n<h2>Introduction</h2>\n<p>...</p>\n<h2>Main Content</h2>\n<h3>Subsection</h3>\n<p>...</p>"
+      }
+    ],
+    "note": "Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>All Headings Example</title>\n  </head>\n  <body>\n    <h1>This is an h1 heading</h1>\n    <h2>This is an h2 heading</h2>\n    <h3>This is an h3 heading</h3>\n    <h4>This is an h4 heading</h4>\n    <h5>This is an h5 heading</h5>\n    <h6>This is an h6 heading</h6>\n  </body>\n</html>"
+    }
+  },
+  "paragraph": {
+    "title": "<p> - Paragraph Element",
+    "slug": "paragraph",
+    "heading": "HTML <p> Element",
+    "subheading": "Defining Paragraphs of Text",
+    "note": "Note: Paragraphs are for blocks of text. Don't use <p> for headings or lists.",
+    "content": [
+      "The <p> element defines a paragraph of text. It is a block-level element and automatically adds space before and after itself.",
+      "Paragraphs are used to group related sentences and make your content easier to read.",
+      "You can use multiple <p> elements to separate different ideas or topics."
+    ],
+    "examples": [
+      {
+        "label": "Basic <p> Example",
+        "code": "<p>This is a paragraph of text in HTML.</p>"
+      },
+      {
+        "label": "Multiple Paragraphs",
+        "code": "<p>First paragraph.</p>\n<p>Second paragraph with more information.</p>"
+      }
+    ],
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>Paragraph Example</title>\n  </head>\n  <body>\n    <p>This is a paragraph in HTML.</p>\n    <p>Paragraphs help structure your content.</p>\n  </body>\n</html>"
+    }
+  }
+}

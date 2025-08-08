@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./luxury-colors.css";
+
+body {
+  background: var(--lux-bg-dark);
+  color: var(--lux-text-light);
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+}

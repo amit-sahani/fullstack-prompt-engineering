@@ -1,0 +1,25 @@
+:root {
+  --lux-bg-dark: #181c2b;
+  --lux-bg-mid: #232946;
+  --lux-bg-light: #f4f4f6;
+  --lux-gold: #ffd700;
+  --lux-gold-light: #f4e2d8;
+  --lux-accent-pink: #f4e2d8;
+  --lux-accent-blue: #232946;
+  --lux-text-dark: #232946;
+  --lux-text-light: #f4f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lux-bg-dark: #181c2b;
+    --lux-bg-mid: #232946;
+    --lux-bg-light: #232946;
+    --lux-gold: #ffd700;
+    --lux-gold-light: #232946;
+    --lux-accent-pink: #f4e2d8;
+    --lux-accent-blue: #232946;
+    --lux-text-dark: #ffd700;
+    --lux-text-light: #f4f4f6;
+  }
+}
