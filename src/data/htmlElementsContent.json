@@ -3,14 +3,13 @@
     "title": "<h1>-<h6> - Heading Elements",
     "slug": "heading",
     "heading": "Heading Elements",
-    "subheading": "",
     "content": [
       "HTML provides six levels of heading elements: <h1> through <h6>. <h1> is the most important and largest, while <h6> is the least important and smallest.",
       "Headings help organize content, improve accessibility, and provide structure for both users and search engines.",
       "Search engines use the headings to index the structure and content of your web pages.",
       "Users often skim a page by its headings. It is important to use headings to show the document structure.",
       "Use <h1> for the main title of the page (only once per page), and use <h2> to <h6> for sub-sections and further subdivisions.",
-      "Each heading level has a different default size and boldness, making the document hierarchy visually clear. By default, <h1> is the largest and <h6> is the smallest. You can change the size of any heading using CSS, for example: h2 { font-size: 2rem; }.",
+      "Each heading level has a different default size and boldness, making the document hierarchy visually clear. By default, <h1> is the largest and <h6> is the smallest. You can change the size of any heading using CSS.",
       "Example: A blog post might use <h1> for the post title, <h2> for section headings, and <h3> for sub-sections within those sections."
     ],
     "examples": [
@@ -25,7 +24,7 @@
     ],
     "note": "Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.",
     "editor": {
-      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>All Headings Example</title>\n  </head>\n  <body>\n    <h1>This is an h1 heading</h1>\n    <h2>This is an h2 heading</h2>\n    <h3>This is an h3 heading</h3>\n    <h4>This is an h4 heading</h4>\n    <h5>This is an h5 heading</h5>\n    <h6>This is an h6 heading</h6>\n  </body>\n</html>"
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>All Headings Example</title>\n</head>\n<body>\n<h1>This is an h1 heading</h1>\n<h2>This is an h2 heading</h2>\n<h3>This is an h3 heading</h3>\n<h4>This is an h4 heading</h4>\n<h5>This is an h5 heading</h5>\n<h6>This is an h6 heading</h6>\n</body>\n</html>"
     }
   },
   "paragraph": {
@@ -49,7 +48,117 @@
       }
     ],
     "editor": {
-      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <title>Paragraph Example</title>\n  </head>\n  <body>\n    <p>This is a paragraph in HTML.</p>\n    <p>Paragraphs help structure your content.</p>\n  </body>\n</html>"
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Paragraph Example</title>\n</head>\n<body>\n<p>This is a paragraph in HTML.</p>\n<p>Paragraphs help structure your content.</p>\n</body>\n</html>"
+    }
+  },
+  "anchor": {
+    "title": "<a> - Anchor Element",
+    "slug": "anchor",
+    "heading": "Anchor Element",
+    "content": [
+      "The <a> element creates hyperlinks, which allow users to navigate to other web pages, files, email addresses, or specific sections of a page.",
+      "It requires the 'href' attribute to specify the destination URL.",
+      "You can also use target attributes like '_blank' to open links in a new tab.",
+      "Anchors can link to external sites, internal pages, or even specific points within the same page using IDs.",
+      "Example: <a href='https://example.com'>Visit Example</a>"
+    ],
+    "examples": [
+      {
+        "label": "Basic Link",
+        "code": "<a href=\"https://example.com\">Visit Example</a>"
+      },
+      {
+        "label": "Open in New Tab",
+        "code": "<a href=\"https://example.com\" target=\"_blank\">Visit Example in New Tab</a>"
+      },
+      {
+        "label": "Link to Section",
+        "code": "<a href=\"#section1\">Go to Section 1</a>\n<h2 id=\"section1\">Section 1</h2>"
+      }
+    ],
+    "note": "Note: Always use descriptive link text for accessibility and SEO.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Anchor Example</title>\n</head>\n<body>\n<a href=\"https://example.com\">Visit Example</a>\n</body>\n</html>"
+    }
+  },
+  "bold": {
+    "title": "<b> - Bold Text",
+    "slug": "bold",
+    "heading": "Bold Text",
+    "content": [
+      "The <b> element makes text bold without adding extra importance or emphasis.",
+      "It is a purely visual change and should not be confused with <strong>, which conveys importance.",
+      "Use <b> for styling purposes only, such as highlighting keywords visually."
+    ],
+    "examples": [
+      {
+        "label": "Basic Bold",
+        "code": "<p>This is <b>bold</b> text.</p>"
+      }
+    ],
+    "note": "Note: Use <strong> instead if the text has semantic importance.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Bold Example</title>\n</head>\n<body>\n<p>This is <b>bold</b> text.</p>\n</body>\n</html>"
+    }
+  },
+  "strong": {
+    "title": "<strong> - Strong Importance",
+    "slug": "strong",
+    "heading": "Strong Element",
+    "content": [
+      "The <strong> element indicates that the text has strong importance, seriousness, or urgency.",
+      "Browsers typically render <strong> text in bold, but the semantic meaning is more important.",
+      "Screen readers will emphasize <strong> text, making it important for accessibility."
+    ],
+    "examples": [
+      {
+        "label": "Basic Strong",
+        "code": "<p>This is <strong>important</strong> text.</p>"
+      }
+    ],
+    "note": "Note: Use <strong> when meaning matters, and <b> for purely visual boldness.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Strong Example</title>\n</head>\n<body>\n<p>This is <strong>important</strong> text.</p>\n</body>\n</html>"
+    }
+  },
+  "br": {
+    "title": "<br> - Line Break",
+    "slug": "br",
+    "heading": "Line Break",
+    "content": [
+      "The <br> element inserts a single line break within text.",
+      "It is an empty element, meaning it has no closing tag.",
+      "Use <br> for small breaks, such as in addresses or poems, but avoid overusing it for layout purposes."
+    ],
+    "examples": [
+      {
+        "label": "Line Break Example",
+        "code": "<p>This is the first line.<br>This is the second line.</p>"
+      }
+    ],
+    "note": "Note: Use CSS for spacing instead of multiple <br> tags.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>BR Example</title>\n</head>\n<body>\n<p>This is the first line.<br>This is the second line.</p>\n</body>\n</html>"
+    }
+  },
+  "hr": {
+    "title": "<hr> - Horizontal Rule",
+    "slug": "hr",
+    "heading": "Horizontal Rule",
+    "content": [
+      "The <hr> element represents a thematic break between paragraph-level elements.",
+      "It is often displayed as a horizontal line and can be styled with CSS.",
+      "It is an empty element and does not require a closing tag."
+    ],
+    "examples": [
+      {
+        "label": "Basic Horizontal Rule",
+        "code": "<p>First section.</p>\n<hr>\n<p>Second section.</p>"
+      }
+    ],
+    "note": "Note: Use <hr> for meaning, not just decoration. Style with CSS if needed.",
+    "editor": {
+      "initialHtml": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>HR Example</title>\n</head>\n<body>\n<p>First section.</p>\n<hr>\n<p>Second section.</p>\n</body>\n</html>"
     }
   }
 }
